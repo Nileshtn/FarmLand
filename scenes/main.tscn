@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmnpnp01m2huu"]
+
+[ext_resource type="PackedScene" uid="uid://c8hbhuigd8o67" path="res://scenes/DFarm.tscn" id="1_1qd6y"]
+[ext_resource type="PackedScene" uid="uid://cgs0ca7f307p3" path="res://scenes/HFarm.tscn" id="2_txs45"]
+[ext_resource type="PackedScene" uid="uid://dpnhnc5gb43e0" path="res://scenes/nFarm.tscn" id="3_4kb5b"]
+[ext_resource type="PackedScene" uid="uid://bowbc0t734w2a" path="res://scenes/player.tscn" id="4_4rv0f"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="dfarm" parent="." instance=ExtResource("1_1qd6y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 0, 0)
+
+[node name="hFarm" parent="." instance=ExtResource("2_txs45")]
+
+[node name="nFarm" parent="." instance=ExtResource("3_4kb5b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, 0)
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("4_4rv0f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4818, 0, 15.8057)
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.018527, 1.10652, -0.590915)

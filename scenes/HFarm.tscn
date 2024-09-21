@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgs0ca7f307p3"]
+
+[ext_resource type="PackedScene" uid="uid://bgie53wmuvx0c" path="res://assets/trees/treepack1.blend" id="1_qgsr8"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_r21pb"]
+albedo_color = Color(0.205087, 0.370134, 0.0070834, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mnqyq"]
+material = SubResource("ORMMaterial3D_r21pb")
+size = Vector2(63.61, 63.61)
+
+[node name="hfarm" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_mnqyq")
+
+[node name="Camera3D" type="Camera3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.50971, 21.9726)
+fov = 57.7134
+
+[node name="treepack1" parent="." instance=ExtResource("1_qgsr8")]
+transform = Transform3D(0.23, 0, 0, 0, 0.23, 0, 0, 0, 0.23, 0.067869, 0.11615, -0.0249372)
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -19.5559, 3.09956, -19.5535)
+billboard = 1
+text = "H farm"
+font_size = 1247

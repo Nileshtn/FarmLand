@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8hbhuigd8o67"]
+
+[ext_resource type="PackedScene" uid="uid://bgie53wmuvx0c" path="res://assets/trees/treepack1.blend" id="1_r4pja"]
+[ext_resource type="PackedScene" uid="uid://8516ojlumy25" path="res://assets/house/cottage_blender.blend" id="2_nvlkh"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_r21pb"]
+albedo_color = Color(0.205087, 0.370134, 0.0070834, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mnqyq"]
+material = SubResource("ORMMaterial3D_r21pb")
+size = Vector2(63.61, 63.61)
+
+[node name="dFarm" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_mnqyq")
+
+[node name="Camera3D" type="Camera3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.50971, 21.9726)
+fov = 57.7134
+
+[node name="treepack1" parent="." instance=ExtResource("1_r4pja")]
+transform = Transform3D(0.23, 0, 0, 0, 0.23, 0, 0, 0, 0.23, -25.1002, 0.11615, -22.9018)
+
+[node name="treepack2" parent="." instance=ExtResource("1_r4pja")]
+transform = Transform3D(0.23, 0, 0, 0, 0.23, 0, 0, 0, 0.23, -25.1002, 0.11615, -18.843)
+
+[node name="treepack3" parent="." instance=ExtResource("1_r4pja")]
+transform = Transform3D(0.23, 0, 0, 0, 0.23, 0, 0, 0, 0.23, -25.1002, 0.11615, -15.4364)
+
+[node name="treepack4" parent="." instance=ExtResource("1_r4pja")]
+transform = Transform3D(0.23, 0, 0, 0, 0.23, 0, 0, 0, 0.23, -25.1002, 0.11615, -12.2171)
+
+[node name="treepack5" parent="." instance=ExtResource("1_r4pja")]
+transform = Transform3D(0.23, 0, 0, 0, 0.23, 0, 0, 0, 0.23, -25.1002, 0.11615, -8.92496)
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 17.6328, 3.09956, -19.5535)
+billboard = 1
+text = "D farm"
+font_size = 1247
+
+[node name="cottage_blender" parent="." instance=ExtResource("2_nvlkh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.4112, 0.0878572, -26.7534)
