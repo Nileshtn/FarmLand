@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://dpnhnc5gb43e0"]
+[gd_scene load_steps=4 format=3 uid="uid://dpnhnc5gb43e0"]
+
+[ext_resource type="PackedScene" uid="uid://bgie53wmuvx0c" path="res://assets/trees/treepack1.blend" id="1_t1dc4"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_r21pb"]
+albedo_color = Color(0.205087, 0.370134, 0.0070834, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mnqyq"]
+material = SubResource("ORMMaterial3D_r21pb")
+size = Vector2(40, 40)
 
 [node name="mainForm" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_mnqyq")
+
+[node name="treepack1" parent="." instance=ExtResource("1_t1dc4")]
+transform = Transform3D(0.54, 0, 0, 0, 0.54, 0, 0, 0, 0.54, 0.743887, 0.42457, 0.386156)
