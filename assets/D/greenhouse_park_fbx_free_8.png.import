@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://l1m8mt70jhi"
+path.s3tc="res://.godot/imported/greenhouse_park_fbx_free_8.png-eeff98fdb97bfd3d5b172abfaf6df076.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "8c40ec0d57862d274cca113605346185"
+}
+
+[deps]
+
+source_file="res://assets/D/greenhouse_park_fbx_free_8.png"
+dest_files=["res://.godot/imported/greenhouse_park_fbx_free_8.png-eeff98fdb97bfd3d5b172abfaf6df076.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
