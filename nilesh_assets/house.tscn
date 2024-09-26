@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://drq5e4wx7mp5f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u27md"]
+albedo_color = Color(0.054902, 0.0392157, 0.0431373, 1)
+
+[node name="House" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+size = Vector3(15, 0.05, 20)
+material = SubResource("StandardMaterial3D_u27md")

@@ -1,8 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dpnhnc5gb43e0"]
+[gd_scene load_steps=4 format=3 uid="uid://dpnhnc5gb43e0"]
 
-[ext_resource type="PackedScene" uid="uid://bgie53wmuvx0c" path="res://assets/trees/treepack1.blend" id="1_t1dc4"]
-[ext_resource type="PackedScene" uid="uid://cvj32ook7nov" path="res://assets/forest_well.glb" id="2_ct1x4"]
-[ext_resource type="PackedScene" uid="uid://dnntrerfis0v1" path="res://assets/david_brown_25d_tractor.glb" id="3_5n2ww"]
+[ext_resource type="PackedScene" uid="uid://drq5e4wx7mp5f" path="res://nilesh_assets/house.tscn" id="1_umqkc"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_r21pb"]
 albedo_color = Color(0.205087, 0.370134, 0.0070834, 1)
@@ -12,7 +10,6 @@ material = SubResource("ORMMaterial3D_r21pb")
 size = Vector2(63.61, 63.61)
 
 [node name="nfarm" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.11, 0, -0.533)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_mnqyq")
@@ -21,17 +18,11 @@ mesh = SubResource("PlaneMesh_mnqyq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.50971, 21.9726)
 fov = 57.7134
 
-[node name="treepack1" parent="." instance=ExtResource("1_t1dc4")]
-transform = Transform3D(0.23, 0, 0, 0, 0.23, 0, 0, 0, 0.23, 0.067869, 0.11615, -0.0249372)
-
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -28.9917, 3.09956, -33.4248)
 billboard = 1
 text = "N farm"
 font_size = 1247
 
-[node name="Sketchfab_Scene" parent="." instance=ExtResource("2_ct1x4")]
-transform = Transform3D(0.58, 0, 0, 0, 0.58, 0, 0, 0, 0.58, 11.6114, -0.0147712, 4.88028)
-
-[node name="Sketchfab_Scene2" parent="." instance=ExtResource("3_5n2ww")]
-transform = Transform3D(0.105, 0, 0, 0, 0.105, 0, 0, 0, 0.105, 11.2152, 0, 3.25524)
+[node name="House" parent="." instance=ExtResource("1_umqkc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025, -10)
